@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+jwt:
+  secret: javainuse
+
+spring:
+  security:
+    user:
+      name: P-0123456789
+      password: password
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      auto-offset-reset: earliest
+    producer:
+      bootstrap-servers: localhost:9092
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+kafka:
+  topic:
+    test-topic: test-topic
+    transaction-topic: transaction-topic
